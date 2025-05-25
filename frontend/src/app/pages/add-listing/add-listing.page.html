@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Add Listing</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form (ngSubmit)="onSubmit()" #listingForm="ngForm">
+
+    <ion-item>
+      <ion-label position="floating">Item Name</ion-label>
+      <ion-input type="text" name="itemName" [(ngModel)]="listing.itemName" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Description</ion-label>
+      <ion-textarea name="description" [(ngModel)]="listing.description" required></ion-textarea>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Category</ion-label>
+      <ion-select name="category" [(ngModel)]="listing.category" interface="popover" required>
+        <ion-select-option value="Plastic">Plastic</ion-select-option>
+        <ion-select-option value="Paper">Paper</ion-select-option>
+        <ion-select-option value="Metal">Metal</ion-select-option>
+        <ion-select-option value="Glass">Glass</ion-select-option>
+        <ion-select-option value="Electronics">Electronics</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Quantity</ion-label>
+      <ion-input type="number" name="quantity" [(ngModel)]="listing.quantity" required></ion-input>
+    </ion-item>
+
+    <ion-button expand="block" type="submit" [disabled]="!listingForm.form.valid">Add Listing</ion-button>
+
+  </form>
+</ion-content>

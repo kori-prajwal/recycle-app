@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>View Listings</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="fetchListings()">Refresh</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-refresher slot="fixed" (ionRefresh)="fetchListings()">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <ion-list *ngIf="!loading && listings.length > 0; else noData">
+    <ion-item *ngFor="let item of listings">
+      <ion-label>
+        <h2>{{ item.title }}</h2>
+        <p>{{ item.description }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ng-template #noData>
+    <ion-text color="medium" class="ion-padding">
+      <p *ngIf="!loading">No listings found.</p>
+      <ion-spinner *ngIf="loading"></ion-spinner>
+    </ion-text>
+  </ng-template>
+</ion-content>
