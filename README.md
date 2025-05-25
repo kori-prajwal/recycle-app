@@ -30,3 +30,9 @@ ionic serve
 ## License 
 MIT License 
 "---\n\n## Author\n**Prajwal Kori**  \n[GitHub Profile](https://github.com/kori-prajwal)  \nEmail: prajwalkori4616@gmail.com"  
+--- 
+ 
+## Author 
+**Prajwal Kori**  
+[GitHub Profile](https://github.com/kori-prajwal)  
+Email: prajwalkori4616@gmail.com 
