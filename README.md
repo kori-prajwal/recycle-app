@@ -1,1 +1,1 @@
-"# Recycle App" 
+# Recycle App`n`n## Overview`nRecycle App is a mobile app built with Ionic and AWS backend services.`n`n## Features`n- Add and view recycling listings.`n`n## Tech Stack`n- Ionic, Angular, AWS Lambda, DynamoDB.`n`n## Installation`nClone the repo and run npm install inside the frontend folder.`n`n## Usage`nRun 'ionic serve' to start the frontend locally.`n`n## License`nMIT License c Prajwal Kori 
